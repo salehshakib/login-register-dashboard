@@ -1,0 +1,93 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import img from "../../../assets/images/Royal Enfield.jpeg";
+
+const Register = () => {
+    return (
+        <section className="bg-[#fff5f5] min-h-[70vh] pt-20 flex items-center h-[100vh]">
+            {/* <PageTitle title={"Register"}></PageTitle> */}
+            <div className="card lg:card-side bg-base-100 shadow-xl w-11/12 md:w-3/4 mx-auto md:max-h-[70vh] my-5 ">
+                <div className="card-body">
+                    <h2 className="card-title text-3xl">Register</h2>
+                    <div className="flex mt-4">
+                        <span className="inline-block w-24 h-1 bg-[#2564eb] rounded-full"></span>
+                        <span className="inline-block w-3 h-1 mx-1 bg-[#2564eb] rounded-full"></span>
+                        <span className="inline-block w-1 h-1 bg-[#07b4d5] rounded-full"></span>
+                    </div>
+                    <p className="">Welcome User, we appriciate you for choosing us.</p>
+                    <form className="form-control py-5">
+                        <label className="label">
+                            <span className="label-text font-bold">Full Name</span>
+                        </label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Type your full name here"
+                            className="input input-bordered w-full"
+                        />
+                        <label className="label">
+                            <span className="label-text font-bold">Email</span>
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Type Your Email here"
+                            className="input input-bordered w-full"
+                            required
+                        />
+                        <label className="label">
+                            <span className="label-text font-bold">Password</span>
+                        </label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Type Your Password here"
+                            className="input input-bordered w-full"
+                            required
+                        />
+                        <label className="label">
+                            <span className="label-text font-bold">Confirm Password</span>
+                        </label>
+                        <input
+                            type="password"
+                            name="c_password"
+                            placeholder="Confirm Your Password here"
+                            className="input input-bordered w-full"
+                            required
+                        />
+
+                        <div className="card-actions">
+                            <div className="flex flex-col w-full border-opacity-50 mt-4">
+                                <button className="btn bg-[#07b4d5] border-none w-full hover:bg-[#152863]">
+                                    Register
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div>
+                        Already have an acount?
+                        <Link
+                            to="/login"
+                            className="text-[#07b4d5] hover:text-[#152863] px-2 hover:underline"
+                        >
+                            Log In Now.
+                        </Link>
+                    </div>
+                </div>
+                <figure className="w-1/2">
+                    <img
+                        src={img}
+                        alt="Album"
+                        className="hidden lg:block object-cover w-full object-center"
+                    />
+                </figure>
+            </div>
+        </section>
+    );
+};
+
+export default Register;
